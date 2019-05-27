@@ -1,59 +1,10 @@
 
-// Fill polyfill
-if (!Array.prototype.fill) {
-  Object.defineProperty(Array.prototype, 'fill', {
-    value: function(value) {
-
-      // Steps 1-2.
-      if (this == null) {
-        throw new TypeError('this is null or not defined');
-      }
-
-      var O = Object(this);
-
-      // Steps 3-5.
-      var len = O.length >>> 0;
-
-      // Steps 6-7.
-      var start = arguments[1];
-      var relativeStart = start >> 0;
-
-      // Step 8.
-      var k = relativeStart < 0 ?
-        Math.max(len + relativeStart, 0) :
-        Math.min(relativeStart, len);
-
-      // Steps 9-10.
-      var end = arguments[2];
-      var relativeEnd = end === undefined ?
-        len : end >> 0;
-
-      // Step 11.
-      var final = relativeEnd < 0 ?
-        Math.max(len + relativeEnd, 0) :
-        Math.min(relativeEnd, len);
-
-      // Step 12.
-      while (k < final) {
-        O[k] = value;
-        k++;
-      }
-
-      // Step 13.
-      return O;
-    }
-  });
-}
-
-
 // Parallax - https://github.com/dixonandmoe/rellax
 (function(h,f){"function"===typeof define&&define.amd?define([],f):"object"===typeof module&&module.exports?module.exports=f():h.Rellax=f()})(this,function(){var h=function(f,l){var b=Object.create(h.prototype),g=0,k=0,c=[],p=!1,u=window.requestAnimationFrame||window.webkitRequestAnimationFrame||window.mozRequestAnimationFrame||window.msRequestAnimationFrame||window.oRequestAnimationFrame||function(a){setTimeout(a,1E3/60)},m=function(a,b,d){return a<=b?b:a>=d?d:a};b.options={speed:-2,center:!1};l&&
 Object.keys(l).forEach(function(a){b.options[a]=l[a]});b.options.speed=m(b.options.speed,-10,10);f||(f=".rellax");var q=document.querySelectorAll(f);if(0<q.length)b.elems=q;else throw Error("The elements you're trying to select don't exist.");var v=function(a){var e=a.getAttribute("data-rellax-percentage"),d=a.getAttribute("data-rellax-speed"),c=e||b.options.center?window.pageYOffset||document.documentElement.scrollTop||document.body.scrollTop:0,f=c+a.getBoundingClientRect().top,h=a.clientHeight||
 a.offsetHeight||a.scrollHeight,g=e?e:(c-f+k)/(h+k);b.options.center&&(g=.5);c=d?m(d,-10,10):b.options.speed;if(e||b.options.center)c=m(d||b.options.speed,-5,5);e=Math.round(100*c*(1-g));a=a.style.cssText;d="";0<=a.indexOf("transform")&&(d=a.indexOf("transform"),d=a.slice(d),d=(g=d.indexOf(";"))?" "+d.slice(11,g).replace(/\s/g,""):" "+d.slice(11).replace(/\s/g,""));return{base:e,top:f,height:h,speed:c,style:a,transform:d}},r=function(){var a=g;g=void 0!==window.pageYOffset?window.pageYOffset:(document.documentElement||
 document.body.parentNode||document.body).scrollTop;return a!=g?!0:!1},t=function(){r()&&!1===p&&n();u(t)},n=function(){for(var a=0;a<b.elems.length;a++){var e=" translate3d(0,"+(Math.round(100*c[a].speed*(1-(g-c[a].top+k)/(c[a].height+k)))-c[a].base)+"px,0)"+c[a].transform;b.elems[a].style.cssText=c[a].style+"-webkit-transform:"+e+";-moz-transform:"+e+";transform:"+e+";"}};b.destroy=function(){for(var a=0;a<b.elems.length;a++)b.elems[a].style.cssText=c[a].style;p=!0};(function(){k=window.innerHeight;
 r();for(var a=0;a<b.elems.length;a++){var e=v(b.elems[a]);c.push(e)}window.addEventListener("resize",function(){n()});t();n()})();return b};return h});
-
-
 
 var startTime,
 	isMovingHeading = false,
@@ -117,15 +68,11 @@ function getIterations(initWord, finWord, iterationNum) {
 	}
 }
 
-
-
 var startTime,
 	lastChangedTime,
 	singleDuration = 60,
     totalDuration = 4000,
     wordIterations = [];
-
-
 
 function animateThings(currTime) {
 	if(window.pageYOffset  != 0) {
@@ -173,11 +120,6 @@ function animateThings(currTime) {
 	}
 }
 window.requestAnimationFrame(animateThings);
-
-
-
-
-
 
 
 var pVids = document.querySelectorAll(".large-preview video");
@@ -331,38 +273,6 @@ function isScrolledIntoView(el) {
     var isVisible = _y < window.innerHeight * 6 / 7;
     return isVisible;
 }
-
-var fadeIns = document.querySelectorAll("figure"),
-	start;
-
-for(var i = 0; i < fadeIns.length; i++) {
-	fadeIns[i].classList.add("fadeIn");
-}
-// Throttle how often it checks
-function checkFadeIns(timestamp) {
-	if (!start) 
-		start = timestamp;
-	var progress = timestamp - start,
-		complete = false;
-	if (progress > 100) { 
-		for(var i = 0; i < fadeIns.length; i++) {
-			if(isScrolledIntoView(fadeIns[i])) {
-				fadeIns[i].classList.remove("fadeIn");
-
-				if(document.querySelectorAll(".fadeIn").length === 0)
-					complete = true;
-			}
-		}
-
-		start = timestamp;
-	}
-
-	if(!complete)
-		window.requestAnimationFrame(checkFadeIns);
-}
-
-window.requestAnimationFrame(checkFadeIns);
-
 
 
 // shake the T
