@@ -28,7 +28,7 @@ h1 {
 }
 
 h1 {
-    font-size: 60px;
+    font-size: 2em;
 }
 
 section {
@@ -313,7 +313,7 @@ header {
     font-family: 'Futura Bold', 'Roboto', Helvetica, Arial, sans-serif;
     height: 83vh;
     font-weight: bold;
-    font-size: 103vh;
+    font-size: 80vh;
     padding-top: 40vh;
     position: absolute;
     top: 7vh;
@@ -345,7 +345,7 @@ header {
 }
 @media (max-aspect-ratio: 1/1) and (max-width: 700px) {
     .T {
-        font-size: 46vh;
+        font-size: 30vh;
         top: 0;
         left: 50%;
         -webkit-transform: translateX(-15%) rotateZ(-30deg) translateY(-30%);
@@ -363,6 +363,9 @@ header {
     }
     .fa-linkedin {
         margin-top: 8.5px;
+    }
+    .T-container {
+        overflow: hidden;
     }
 }
 
@@ -522,7 +525,7 @@ header {
     white-space: nowrap;
 }
 
-@media (min-width: 370px) {
+@media (max-width: 370px) {
     .link-banner::before {
         border-width: 0 0 84px 60px;
     }
@@ -532,7 +535,9 @@ header {
     .side-img {
         width: 40%;
     }
-    
+    .T-container {
+        overflow: hidden;
+    }
 }
 @media (min-width: 500px) {
     .link-banner,
@@ -688,6 +693,10 @@ footer {
 
     .title-container { 
         bottom: -45px;
+    }
+    /*fixes a bug with mobile devices*/
+    .T-container {
+        overflow: hidden;
     }
 }
 
