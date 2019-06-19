@@ -1,4 +1,4 @@
-
+document.addEventListener('DOMContentLoaded', function() { 
 // Parallax - https://github.com/dixonandmoe/rellax
 (function(h,f){"function"===typeof define&&define.amd?define([],f):"object"===typeof module&&module.exports?module.exports=f():h.Rellax=f()})(this,function(){var h=function(f,l){var b=Object.create(h.prototype),g=0,k=0,c=[],p=!1,u=window.requestAnimationFrame||window.webkitRequestAnimationFrame||window.mozRequestAnimationFrame||window.msRequestAnimationFrame||window.oRequestAnimationFrame||function(a){setTimeout(a,1E3/60)},m=function(a,b,d){return a<=b?b:a>=d?d:a};b.options={speed:-2,center:!1};l&&
 Object.keys(l).forEach(function(a){b.options[a]=l[a]});b.options.speed=m(b.options.speed,-10,10);f||(f=".rellax");var q=document.querySelectorAll(f);if(0<q.length)b.elems=q;else throw Error("The elements you're trying to select don't exist.");var v=function(a){var e=a.getAttribute("data-rellax-percentage"),d=a.getAttribute("data-rellax-speed"),c=e||b.options.center?window.pageYOffset||document.documentElement.scrollTop||document.body.scrollTop:0,f=c+a.getBoundingClientRect().top,h=a.clientHeight||
@@ -11,13 +11,11 @@ var startTime,
 	finishedAnimating = false;
 
 var wordBank = [
-    "interactive",
-    "cutting-edge",
     "responsive",
+    "accessible",
+    "clean coded",
     "animated",
-    "exceptional",
 	"unusual",
-    "fun",
     "meaningful"
 ];
 var currentNum = 0,
@@ -27,7 +25,7 @@ var wordHighlight = document.querySelector(".word-highlight"),
     maxNumIterations = 13,
     minNumIterations = 10,
     wordString = [],
-    letterBank = "abcdefghijklmnopqrstuvwxyz";
+    letterBank = "successwillcomeIknow";
 
 function getIterations(initWord, finWord, iterationNum) {
 	if(wordHighlight) {
@@ -136,19 +134,7 @@ function zoomVideo(video) {
 	}
 	video.play();
 }
-function unzoomVideo(video) {
-	var w = window.innerWidth;
-	if(w > 1400) {
-		video.style.webkitTransform = "scale(0.933333333) translate(-3.666%, -3.666%)";
-		video.style.msTransform = "scale(0.933333333) translate(-3.666%, -3.666%)";
-		video.style.transform = "scale(0.933333333) translate(-3.666%, -3.666%)";
-	} else {
-		video.style.webkitTransform = "scale(1) translate(-3.666%)";
-		video.style.msTransform = "scale(1) translate(-3.666%)";
-		video.style.transform = "scale(1) translate(-3.666%)";
-	}
-	video.pause();
-}
+
 function unzoomAllVids(e) {
 	for(var i = 0; i < pVids.length; i++) {
 		unzoomVideo(pVids[i]);
@@ -288,4 +274,5 @@ document.body.onmousemove = function(e) {
 
 		ZContainer.style.transform = "translateX(" + horizScale + "%) translateY(" + vertScale + "%)";
 	}
+}
 }
