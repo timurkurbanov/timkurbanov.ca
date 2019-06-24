@@ -6,7 +6,7 @@
     <title>Timur Kurbanov - Front-End Developer</title>
     <link href="assets/Zsmall.png" rel="icon">
     <link rel="stylesheet" href="style.css">
-    <meta name="description" content="The personal website and portfolio of front-end developer Tim Kurbanov.">
+    <meta name="description" content="The personal website and portfolio of front-end developer Timur Kurbanov.">
     <meta name="robots" content="all">
     <meta name="author" content="Timur Kurbanov">
     <meta name="Copyright" content="Timur Kurbanov ©2019. All Rights Reserved.">
@@ -47,10 +47,7 @@
 
 <div id="scroll-indicator">
     <a onclick="event.preventDefault(); doScrolling('#description-container', 1000)" href="#description-container">
-        scroll for more
-        <div class="scroll-arrow-container">
-            <div class="scroll-arrow"></div>
-        </div>
+        <img class="scroll-img" src="assets/scroll.png">
     </a>
 </div>
 
@@ -58,7 +55,7 @@
     <div class="container">
         <header>
             <h1 class="main-heading">Timur Kurbanov</h1>
-            <div class="main-subheading">Front-End Developer.<br/>Specialist in the <span class="word-highlight"><span class="word">interactive</span></span>.</div>
+            <div class="main-subheading">Front-End Developer.<br/>Specialty in <span class="word-highlight"><span class="word">interactive</span></span> web.</div>
         </header>
     </div>
 
@@ -70,21 +67,19 @@
 <section id="description-container">
     <div class="container">
         <div class="card rellax" data-rellax-speed="1">
-          
-            <p> I am the guy with a curious mind. I have always been trying to come up with ideas and projects to tackle.</p> 
-            <p>I believe in inner powers and that I can impove in my daily job everyday. I find satisfaction in setting a goal and seeing it through until the end.</p> 
-            <p>In daily work, I do my best to make complexity feel alittle simpler. I am dedicated to creating a clean, well-structured and
-                accessible websites for businesses who are looking to build their significant online presence.</p>
-                <p>When I'm not coding, I enjoy team sports, board games, and mentoring at <a href="https://www.canadalearningcode.ca/">Canada Learning Code.</a></p>
+            <p>I enjoy computer science, mathematics and writing code. I have always been trying to come up with ideas and projects to tackle.</p> 
+            <p>I believe in inner powers and that I can impove in my daily job. I find satisfaction in setting a goal and seeing it through until the end.</p> 
+            <p>In daily work, I do my best to make complexity feel alittle simpler. I am dedicated to creating a clean, well-structured and accessible websites.</p>
+                <p>When I'm not coding, you can find me enjoying team sports, board games, lecturing or mentoring at<br> <a href="https://www.canadalearningcode.ca/">Canada Learning Code.</a></p>
 </div>
     </div>
 
-    <img class="side-img rellax" src="assets/11.jpg" data-rellax-speed="-1.2" alt="Personal image of Tim Kurbanov">
+    <img class="side-img rellax" src="assets/11.jpg" data-rellax-speed="-1.2" alt="Personal image of Timur Kurbanov">
 </section>
 <section class="block">
 </section>
 <section id="publications-container">
-    <div class="container">
+    <div class="containerOne">
         <div class="left-floated-container">
             <h2 id="publications">Publications on Medium</h2>
             <ul>
@@ -97,6 +92,164 @@
 <section class="blockend">
 </section>
 
+<section id="projects-container">
+    <div class="container">
+
+        <div class="right-floated-container">
+            <h2 id="projects">Projects</h2>
+        </div>
+
+        <figure class="large-preview inline-left first-inline" data-project-name="Disintegrate plugin">
+            <div class="shadow-container">
+                
+                <a class="outer-pgram" target="_blank" href="https://timurkurbanov.github.io/geniapastry/">
+                    <div class="inner-pgram">
+                        <video loop poster="./assets/pastry.mov" preload>
+                            <source src="./assets/pastry.mp4#t=1.3" type="video/mp4">
+                            <source src="./assets/pastry.mp4" type="video/webm">
+                        </video>
+                    </div>
+                </a>
+
+                <div class="title-container">
+                    <a target="_blank" href="https://github.com/timurkurbanov/geniapastry">
+                        <div class="first-line">
+                            <h3>Evgenya Pastry</h3>
+                        </div><!--
+                     --><br><!--
+                     --><div class="second-line">
+                            <h3>Creation process</h3>
+                        </div>
+                        <div class="click-arrow">
+                            <h3>&gt;&gt;</h3>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </figure>
+
+        <figure class="large-preview inline-left" data-project-name="Kickstarter">
+            <div class="shadow-container">
+                
+                <a class="outer-pgram" target="_blank" href="https://djangocrowdfundermaster.herokuapp.com/login/">
+                    <div class="inner-pgram">
+                        <video loop poster="/assets/kick.mp4" preload>
+                            <source src="/assets/kick.mp4#t=1.3" type="video/mp4">
+                            <source src="/assets/kick.mp4" type="video/webm">
+                        </video>
+                    </div>
+                </a>
+
+                <div class="title-container">
+                    <a target="_blank" href="https://github.com/timurkurbanov/kickstarter">
+                        <div class="first-line">
+                            <h3>Crowdfunder analogue</h3>
+                        </div><!--
+                     --><br><!--
+                     --><div class="second-line">
+                            <h3>Creation process and Python testing</h3>
+                        </div>
+                        <div class="click-arrow">
+                            <h3>&gt;&gt;</h3>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </figure>
+
+        <!-- <figure class="large-preview inline-right" data-project-name="Asset loading">
+            <div class="shadow-container">
+                
+                <a class="outer-pgram" target="_blank" href="">
+                    <div class="inner-pgram">
+                        <video loop poster="" preload>
+                            <source src="#t=14.3" type="video/mp4">
+                            <source src="#t=14.3" type="video/webm">
+                            A preview of my asset loading effects project.
+                        </video>
+                    </div>
+                </a>
+
+                <div class="title-container">
+                    <a target="_blank" href="">
+                        <div class="first-line">
+                            <h3></h3>
+                        </div>
+                     br> -->
+                     <!-- div class="second-line">
+                            <h3>Effects</h3>
+                        </div>
+                        <div class="click-arrow">
+                            <h3>&gt;&gt;</h3>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </figure> -->
+
+        <!-- <figure class="large-preview inline-left" data-project-name="Pieces carousel transition">
+            <div class="shadow-container">
+                
+                <a class="outer-pgram" target="_blank" href="">
+                    <div class="inner-pgram">
+                        <video loop poster="" preload>
+                            <source src="#t=0.5" type="video/mp4">
+                            <source src="#t=0.5" type="video/webm">
+                            A preview of my building images project.
+                        </video>
+                    </div>
+                </a> -->
+
+                <!-- <div class="title-container">
+                    <a target="_blank" href="">
+                        <div class="first-line">
+                            <h3>Shatter</h3>
+                        </div>
+                     <br>
+                     <div class="second-line">
+                            <h3>Transition</h3>
+                        </div>
+                        <div class="click-arrow">
+                            <h3>&gt;&gt;</h3>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </figure> -->
+
+        <!-- <figure class="large-preview inline-right" data-project-name="Clip path projects">
+            <div class="shadow-container">
+                
+                <a class="outer-pgram" target="_blank" href="">
+                    <div class="inner-pgram">
+                        <video loop poster="" preload>
+                            <source src="" type="video/mp4">
+                            <source src="" type="video/webm">
+                            A preview of my clip path projects.
+                        </video>
+                    </div>
+                </a> -->
+
+                <!-- <div class="title-container">
+                    <a target="_blank" href="">
+                        <div class="first-line">
+                            <h3>Clip Path</h3>
+                        </div>
+                     <br>
+                     <div class="second-line">
+                            <h3>Experiments</h3>
+                        </div>
+                        <div class="click-arrow">
+                            <h3>&gt;&gt;</h3>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </figure> -->
+
+    </div>
+</section>
+
 <div id="socials">
     <a href="https://www.linkedin.com/in/timur-kurbanov/"><i class="fab fa-linkedin"></i></a>
     <a href="https://github.com/timurkurbanov"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAACcUlEQVRYR+2WT8gMYRzHv79hzBwcEOp1k4sau7XzEKXcFJJX1HsR5SBJiJSSmyTvwemlcJGTPzeRolzkwPbMztbOS9q3Vvay5d20KbPZmZ9Gs7VN3npmJmvVzGUu3+98P31/v2efJUz4QxPOhwIw74SKBosG8zaQ11/sYNHgUg0IIQ4y8y4ieiSlrAIIl9BSqVTaqOv6UQADx3FuRG/VZrPu4HIhxE0AZ+Kgl8w8T0TbAGxiZgPAAhFVmXkNER0CoAN4FQTBjOu638YNqJo3NkCybfsiEc2qkkU6Zr7f7XZPtVotX9WXacS2bZcBvCCiDapBse4ngCNSyieqvqyAl4nommpIQvdgcXHxpGqLqQEty1phGMYcEZ3ICPgOwH4p5VcVf2pAAMkTrJIzqnnr+/4Bz/O6KsYsgBBCXAVwRSXgD5q/O+Io0LbtPUT0NP5tS8t5Wkp5W9WUqUHLslaapnkLwDHVoFhX6/f7041G44uqLxNg9PFyubxe1/W7AKYVw7wgCI67rhtdi8pPKkAhRHRdnQ3DsFqr1d4AWFapVHZqmnYYwG4AmxPJHwG8B/C40+m8brfbP5TJYmEqwMgjhJhi5lkieiilfD78jhDiEoDrowDMfKfX651rNpv9tGBDfWrA+JDsIKILYRjOaZo2D2AKwD0A2xMgC4PBYF+9Xv80VkAA0V08Q0Tnmfk7EYXMvJWIVica/Axgr+M4H8YN+DsvOs2GYWwBsC6++koTBTiEEUKsBfAsOWJm/rcN/jeAADTLslaZpqmNjtj3/dDzvF6av/jJXc10irMufBZfAZiltVFP0WDRYN4G8vqLHczb4C/7mOIpIkOZIwAAAABJRU5ErkJggg==" alt="link to GitHub personal account"></a>
@@ -105,19 +258,6 @@
 </div>
 
 <script src="site.js"></script>
-<script type="text/javascript">
-        window.requestAnimationFrame = function() {
-            return window.requestAnimationFrame ||
-                window.webkitRequestAnimationFrame ||
-                window.mozRequestAnimationFrame ||
-                window.msRequestAnimationFrame ||
-                window.oRequestAnimationFrame ||
-                function(f) {
-                window.setTimeout(f, 1e3 / 60);
-            }
-        }();
-
-    </script>
 <footer>
 
 </footer>

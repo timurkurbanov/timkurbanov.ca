@@ -11,14 +11,9 @@ var startTime,
 	finishedAnimating = false;
 
 var wordBank = [
-    "interactive",
-    "cutting-edge",
     "responsive",
     "animated",
-    "exceptional",
-	"unusual",
-    "fun",
-    "meaningful"
+	"accessible",
 ];
 var currentNum = 0,
 	currentIteration = 0;
